@@ -1,0 +1,4 @@
+{
+    "appService.preDeployTask": "package:MoneyCollector",
+    "appService.deploySubpath": "target/MoneyCollector-0.0.1-SNAPSHOT.war"
+}

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>MoneyCollector</display-name>
+  
+  
+  
+ 
+
+  
+  
+ <servlet>  
+<servlet-name>login</servlet-name>  
+<jsp-file>/VIEW/login.jsp</jsp-file>  
+</servlet>    
+<servlet-mapping>  
+<servlet-name>login</servlet-name>  
+<url-pattern>/login</url-pattern>  
+</servlet-mapping>  
+
+<servlet>  
+<servlet-name>index</servlet-name>  
+<jsp-file>/VIEW/home1.jsp</jsp-file>  
+</servlet>    
+<servlet-mapping>  
+<servlet-name>index</servlet-name>  
+<url-pattern>/index</url-pattern>  
+</servlet-mapping>  
+
+
+<servlet>  
+<servlet-name>collect</servlet-name>  
+<jsp-file>/VIEW/home2.jsp</jsp-file>  
+</servlet>    
+<servlet-mapping>  
+<servlet-name>collect</servlet-name>  
+<url-pattern>/collect</url-pattern>  
+</servlet-mapping>  
+
+<servlet>  
+<servlet-name>done</servlet-name>  
+<jsp-file>/CONTROLLER/go.jsp</jsp-file>  
+</servlet>    
+<servlet-mapping>  
+<servlet-name>done</servlet-name>  
+<url-pattern>/done</url-pattern>  
+</servlet-mapping>  
+
+<servlet>  
+<servlet-name>search</servlet-name>  
+<jsp-file>/VIEW/home3.jsp</jsp-file>  
+</servlet>    
+<servlet-mapping>  
+<servlet-name>search</servlet-name>  
+<url-pattern>/search</url-pattern>  
+</servlet-mapping>  
+
+
+<servlet>  
+<servlet-name>verify</servlet-name>  
+<jsp-file>/VIEW/home4.jsp</jsp-file>  
+</servlet>    
+<servlet-mapping>  
+<servlet-name>verify</servlet-name>  
+<url-pattern>/verify</url-pattern>  
+</servlet-mapping>  
+  
+<servlet>  
+<servlet-name>allpayment</servlet-name>  
+<jsp-file>/VIEW/home5.jsp</jsp-file>  
+</servlet>    
+<servlet-mapping>  
+<servlet-name>allpayment</servlet-name>  
+<url-pattern>/allpayment</url-pattern>  
+</servlet-mapping>  
+ 
+ <servlet>  
+<servlet-name>add</servlet-name>  
+<jsp-file>/VIEW/home6.jsp</jsp-file>  
+</servlet>    
+<servlet-mapping>  
+<servlet-name>add</servlet-name>  
+<url-pattern>/add</url-pattern>  
+</servlet-mapping>   
+  
+  
+   
+ <servlet>  
+<servlet-name>paymoney</servlet-name>  
+<jsp-file>/CONTROLLER/pay.jsp</jsp-file>  
+</servlet>    
+<servlet-mapping>  
+<servlet-name>paymoney</servlet-name>  
+<url-pattern>/CONTROLLER/paymoney</url-pattern>  
+</servlet-mapping>   
+  
+ <servlet>  
+<servlet-name>process</servlet-name>  
+<jsp-file>/CONTROLLER/process.jsp</jsp-file>  
+</servlet>    
+<servlet-mapping>  
+<servlet-name>process</servlet-name>  
+<url-pattern>/CONTROLLER/process</url-pattern>  
+</servlet-mapping>  
+
+
+ <servlet>  
+<servlet-name>delete</servlet-name>  
+<jsp-file>/CONTROLLER/delete.jsp</jsp-file>  
+</servlet>    
+<servlet-mapping>  
+<servlet-name>delete</servlet-name>  
+<url-pattern>/CONTROLLER/delete</url-pattern>  
+</servlet-mapping>  
+
+ <servlet>  
+<servlet-name>paymentdone</servlet-name>  
+<jsp-file>/CONTROLLER/payment.jsp</jsp-file>  
+</servlet>    
+<servlet-mapping>  
+<servlet-name>paymentdone</servlet-name>  
+<url-pattern>/CONTROLLER/paymentdone</url-pattern>  
+</servlet-mapping>  
+
+    <filter>
+   <filter-name>Admin</filter-name>
+   <filter-class>filter.Admin</filter-class>
+</filter>
+<filter-mapping>
+   <filter-name>Admin</filter-name>
+   <url-pattern>/allpayment</url-pattern>
+   <url-pattern>/add</url-pattern>
+</filter-mapping>
+
+    <filter>
+   <filter-name>Checking</filter-name>
+   <filter-class>filter.Checking</filter-class>
+</filter>
+<filter-mapping>
+   <filter-name>Checking</filter-name>
+   <url-pattern>/*</url-pattern>
+
+</filter-mapping>
+   
+  <error-page>
+		<location>/VIEW/404.html</location>
+</error-page>
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+   
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+</web-app>
